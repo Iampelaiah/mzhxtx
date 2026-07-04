@@ -1,0 +1,6 @@
+{
+  "name": "Mazhetx",
+  "description": "A secure cryptographic escrow and job board application for verified technical service providers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

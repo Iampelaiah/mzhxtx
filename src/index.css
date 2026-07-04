@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-security-blue: #000000;
+  --color-trust-emerald: #ffffff;
+  --color-brand-emerald-dim: #1c1c1e;
+  --color-brand-emerald-dark: #ffffff;
+}
+
+@layer utilities {
+  /* Ambient Shadows for High-Integrity UI */
+  .shadow-ambient {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  .shadow-priority {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .outline-text {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.45);
+    color: transparent;
+  }
+  .outline-text-sm {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+    color: transparent;
+  }
+}
+
+/* Custom interactive animation classes */
+.interactive-hover {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.interactive-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 1);
+}
+.interactive-hover:active {
+  transform: translateY(0);
+}
+
